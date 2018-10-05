@@ -26,7 +26,7 @@ view: dim_policy1 {
     type: number
     sql: ${TABLE}."INTERESTRATE" ;;
   }
-#converted to Measure from Dimension
+
   dimension: monthlypremiumtobepaid {
     type: number
     value_format_name: id
@@ -103,5 +103,4 @@ view: dim_policy1 {
     type: count
     drill_fields: [policyname, agentname]
   }
-
 }
