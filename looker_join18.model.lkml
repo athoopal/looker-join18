@@ -26,8 +26,14 @@ explore: quote2 {}
 
 explore: dim_tim {}
 
-
-
+explore: p_dim_agent {}
+explore: p_dim_billingpayment {}
+explore: p_dim_cancelpolicy {}
+explore: p_dim_lineofbusiness {}
+explore: p_dim_policy {}
+explore: p_dim_riskstate {}
+explore: p_dim_time {}
+explore: p_fct_productdashboard {}
 
 explore: agent2 {}
 
