@@ -20,4 +20,10 @@ view: dim_line_of_business {
     type: count
     drill_fields: []
   }
+
+  measure: count1 {
+    label: "LOB_Count"
+    type: count
+    drill_fields: [l_line_of_business_id]
+  }
 }

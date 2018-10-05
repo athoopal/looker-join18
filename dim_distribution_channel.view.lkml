@@ -20,4 +20,10 @@ view: dim_distribution_channel {
     type: count
     drill_fields: []
   }
+
+  measure: count1  {
+    label: "Distribution_Cannel_Count"
+    type: count
+    drill_fields: [d_distribution_channel_id]
+  }
 }

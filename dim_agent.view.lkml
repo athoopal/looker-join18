@@ -45,4 +45,11 @@ view: dim_agent {
     type: count
     drill_fields: [a_agent_name]
   }
+
+  measure: count1 {
+    label: "Agent_Count"
+    type: count_distinct
+    drill_fields: [a_agent_id]
+  }
+
 }

@@ -50,4 +50,11 @@ view: dim_quote {
     type: count
     drill_fields: []
   }
+
+  measure: count1 {
+    label: "Quote_Count"
+    type: count_distinct
+    sql: ${q_quote_id} ;;
+    drill_fields: [q_quote_id]
+  }
 }

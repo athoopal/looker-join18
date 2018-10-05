@@ -10,7 +10,7 @@ datagroup: looker_join18_default_datagroup {
 
 persist_with: looker_join18_default_datagroup
 
-explore: dim_agent {}
+explore: dim_agent {  }
 
 explore: dim_distribution_channel {}
 
@@ -22,4 +22,41 @@ explore: dim_quote {}
 
 explore: dim_risk_state {}
 
-explore: fct_agentdashboard {}
+explore: fct_agentdashboard {
+  join: dim_agent {
+    type: inner
+    relationship: many_to_one
+    sql_on: ${fct_agentdashboard.f_agent_id}=${dim_agent.a_agent_id} ;;
+  }
+
+  join: dim_policy {
+    type: inner
+    relationship: many_to_one
+    sql_on: ${fct_agentdashboard.f_policy_id}=${dim_policy.p_policy_id} ;;
+  }
+
+  join: dim_quote {
+    type: inner
+    relationship: many_to_one
+    sql_on: ${fct_agentdashboard.f_quote_id}=${dim_quote.q_quote_id} ;;
+  }
+
+  join: dim_distribution_channel {
+    type: inner
+    relationship: many_to_one
+    sql_on: ${fct_agentdashboard.f_distribution_channel_id}=${dim_distribution_channel.d_distribution_channel_id} ;;
+  }
+
+  join: dim_line_of_business {
+    type: inner
+    relationship: many_to_one
+    sql_on: ${fct_agentdashboard.f_line_of_business_id}=${dim_line_of_business.l_line_of_business_id} ;;
+  }
+
+  join: dim_tim {
+    type: inner
+    relationship: many_to_one
+    sql_on: ${fct_agentdashboard.f_calendar_key}=${dim_tim.calkey} ;;
+  }
+
+}

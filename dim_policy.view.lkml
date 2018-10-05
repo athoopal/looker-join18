@@ -65,4 +65,10 @@ view: dim_policy {
     type: count
     drill_fields: []
   }
+  measure: count1 {
+    label: "Ploicy_Count"
+    type: count_distinct
+    drill_fields: [p_policy_id]
+  }
+
 }
