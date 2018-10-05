@@ -20,9 +20,26 @@ explore: dim_policy {}
 
 explore: dim_quote {}
 
+explore: dim_policy1 {}
+
+explore: dim_quote1 {}
+
+explore: dim_tim {}
+
+explore: dim_agent1 {
+
+  }
+
 explore: dim_risk_state {}
 
 explore: fct_agentdashboard {
+
+  join: dim_risk_state {
+    type: inner
+    relationship: many_to_one
+    sql_on: ${fct_agentdashboard.f_line_of_business_id}=${dim_risk_state.r_risk_state_id} ;;
+  }
+
   join: dim_agent {
     type: inner
     relationship: many_to_one
@@ -50,7 +67,7 @@ explore: fct_agentdashboard {
   join: dim_line_of_business {
     type: inner
     relationship: many_to_one
-    sql_on: ${fct_agentdashboard.f_line_of_business_id}=${dim_line_of_business.l_line_of_business_id} ;;
+    sql_on: ${fct_agentdashboard.f_risk_state_id}=${dim_line_of_business.l_line_of_business} ;;
   }
 
   join: dim_tim {
@@ -58,5 +75,7 @@ explore: fct_agentdashboard {
     relationship: many_to_one
     sql_on: ${fct_agentdashboard.f_calendar_key}=${dim_tim.calkey} ;;
   }
+
+
 
 }

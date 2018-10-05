@@ -23,6 +23,7 @@ view: dim_risk_state {
 
   dimension: r_risk_state_meaning {
     type: string
+    map_layer_name: us_states
     sql: ${TABLE}."R_Risk State Meaning" ;;
   }
 

@@ -61,12 +61,15 @@ view: dim_policy {
     sql: ${TABLE}."P_Policy Underwriting Status" ;;
   }
 
+
+
   measure: count {
     type: count
     drill_fields: []
   }
   measure: count1 {
     label: "Ploicy_Count"
+    sql: ${p_policy_id} ;;
     type: count_distinct
     drill_fields: [p_policy_id]
   }
