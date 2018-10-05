@@ -26,9 +26,11 @@ explore: dim_quote1 {}
 
 explore: dim_tim {}
 
-explore: dim_agent1 {
+explore: dim_agent1 {}
 
-  }
+explore: policy2 {}
+explore: quote2 {}
+explore: agent2 {}
 
 explore: dim_risk_state {}
 
