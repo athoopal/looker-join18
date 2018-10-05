@@ -20,13 +20,13 @@ explore: dim_policy {}
 
 explore: dim_quote {}
 
-explore: dim_policy1 {}
+explore: policy2 {}
 
-explore: dim_quote1 {}
+explore: quote2 {}
 
 explore: dim_tim {}
 
-explore: dim_agent1 {
+explore: agent2 {
 
   }
 
