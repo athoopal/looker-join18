@@ -36,13 +36,26 @@ explore: dim_policy {}
 
 explore: dim_quote {}
 
-explore: policy2 {}
+
 
 explore: quote2 {}
 
 explore: dim_tim {}
 
+explore: policy2 {
 
+  join: agent2 {
+    type:  inner
+    relationship: one_to_one
+    sql_on: ${policy2.agent_id}=${agent2.agentid} ;;
+  }
+
+  join: quote2 {
+    type:  inner
+    relationship: one_to_one
+    sql_on: ${quote2.policy_id}=${quote2.policy_id} ;;
+  }
+}
 
 
 
