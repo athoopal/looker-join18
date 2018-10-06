@@ -53,7 +53,7 @@ explore: policy2 {
   join: quote2 {
     type:  inner
     relationship: one_to_one
-    sql_on: ${quote2.policy_id}=${quote2.policy_id} ;;
+    sql_on: ${policy2.policy_id}=${quote2.policy_id} ;;
   }
 }
 
