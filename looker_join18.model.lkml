@@ -10,6 +10,22 @@ datagroup: looker_join18_default_datagroup {
 
 persist_with: looker_join18_default_datagroup
 
+explore: p_dim_agent {  }
+
+explore: p_dim_billingpayment {}
+
+explore: p_dim_cancelpolicy {}
+
+explore: p_dim_lineofbusiness {}
+
+explore: p_dim_policy {}
+
+explore: p_dim_riskstate {}
+
+explore: p_dim_time {}
+
+
+
 explore: dim_agent {  }
 
 explore: dim_distribution_channel {}
@@ -25,9 +41,6 @@ explore: policy2 {}
 explore: quote2 {}
 
 explore: dim_tim {}
-
-
-
 
 explore: agent2 {}
 
@@ -77,6 +90,50 @@ explore: fct_agentdashboard {
     sql_on: ${fct_agentdashboard.f_calendar_key}=${dim_tim.calkey} ;;
   }
 
+  }
 
+  explore: p_fct_productdashboard {
+
+       join: p_dim_agent {
+        type: inner
+        relationship: many_to_one
+        sql_on: ${p_fct_productdashboard.f_agent_id}=${p_dim_agent.a_agent_id} ;;
+      }
+
+    join: p_dim_cancelpolicy {
+      type: inner
+      relationship: many_to_one
+      sql_on: ${p_fct_productdashboard.f_line_of_f_cancellation_id}=${p_dim_cancelpolicy.cancellation_id} ;;
+    }
+
+    join: p_dim_lineofbusiness {
+      type: inner
+      relationship: many_to_one
+      sql_on: ${p_fct_productdashboard.f_line_of_business_id}=${p_dim_lineofbusiness.l_line_of_business_id} ;;
+    }
+
+    join: p_dim_policy {
+      type: inner
+      relationship: many_to_one
+      sql_on: ${p_fct_productdashboard.f_policy_id}=${p_dim_policy.p_policy_id} ;;
+    }
+
+    join: p_dim_riskstate {
+      type: inner
+      relationship: many_to_one
+      sql_on: ${p_fct_productdashboard.f_risk_state_id}=${p_dim_riskstate.r_risk_state_id} ;;
+    }
+
+    join: p_dim_time {
+      type: inner
+      relationship: many_to_one
+      sql_on: ${p_fct_productdashboard.f_calendar_key}=${p_dim_time.calendar_key} ;;
+    }
+
+    join: p_dim_billingpayment {
+      type: inner
+      relationship: many_to_one
+      sql_on: ${p_fct_productdashboard.f_line_of_f_billing_payments}=${p_dim_billingpayment.billing_payment_id} ;;
+    }
 
 }
