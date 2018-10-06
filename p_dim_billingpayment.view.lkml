@@ -3,6 +3,7 @@ view: p_dim_billingpayment {
 
   dimension: billing_payment_id {
     type: string
+
     primary_key: yes
     sql: ${TABLE}."BILLING_PAYMENT_ID" ;;
   }
@@ -22,8 +23,16 @@ view: p_dim_billingpayment {
     sql: ${TABLE}."Policy_Billing_Payment_ID " ;;
   }
 
+  measure: policy_billing_count {
+    label: "Policy Billing Count"
+
+    sql: ${TABLE}."BILLING_PAYMENT_ID" ;;
+  }
+
+
+
   measure: count {
-    label: "Policy Billiny Count"
+
     type: count
     drill_fields: []
   }

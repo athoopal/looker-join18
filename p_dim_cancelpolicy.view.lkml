@@ -45,10 +45,4 @@ view: p_dim_cancelpolicy {
     type: count
     drill_fields: []
   }
-
-  measure: policy_cancel_count {
-    type: count_distinct
-    sql: ${TABLE}."Policy_Cancel_ID  " ;;
-    drill_fields: []
-  }
 }
