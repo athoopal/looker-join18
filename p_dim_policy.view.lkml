@@ -43,7 +43,7 @@ view: p_dim_policy {
 
   dimension: p_policy_id {
     type: string
-
+primary_key: yes
     sql: ${TABLE}."P_POLICY_ID" ;;
   }
 
@@ -71,5 +71,10 @@ view: p_dim_policy {
     type: count
 
     drill_fields: []
+  }
+
+  measure: p_gross_written_premium{
+    type: sum
+    sql: ${_gross_written_premium_} ;;
   }
 }
