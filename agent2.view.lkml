@@ -46,7 +46,16 @@ view: agent2 {
     sql: ${TABLE}."TARGETENDDATE" ;;
   }
 
+  measure: m_actual {
+    type: sum
+    sql: ${actual} ;;
+  }
 
+
+  measure: m_plan {
+    type: sum
+    sql: ${plan};;
+  }
 
   measure: count {
     type: count
