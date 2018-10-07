@@ -77,4 +77,7 @@ primary_key: yes
     type: sum
     sql: ${_gross_written_premium_} ;;
   }
+
+
+
 }
