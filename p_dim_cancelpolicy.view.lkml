@@ -23,6 +23,7 @@ view: p_dim_cancelpolicy {
 
   dimension: cancellation_id {
     type: string
+    primary_key: yes
     sql: ${TABLE}."CANCELLATION_ID" ;;
   }
 

@@ -31,6 +31,7 @@ view: p_dim_policy {
       quarter,
       year
     ]
+    drill_fields: []
     convert_tz: no
     datatype: date
     sql: ${TABLE}."P_EXPIRATION_DATE" ;;
