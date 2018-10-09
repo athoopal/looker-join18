@@ -53,6 +53,6 @@ view: p_dim_agent {
 
   measure: count {
     type: count
-    drill_fields: [a_agent_name]
+    drill_fields: [a_agent_id,a_agent_name]
   }
 }

@@ -38,6 +38,6 @@ view: p_dim_time {
 
   measure: count {
     type: count
-    drill_fields: []
+    drill_fields: [the_date,the_week,the_month,the_quarter]
   }
 }

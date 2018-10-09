@@ -18,12 +18,12 @@ view: dim_distribution_channel {
 
   measure: count {
     type: count
-    drill_fields: []
+    drill_fields: [d_distribution_channel_id,d_distribution_channel_meaning]
   }
 
   measure: count1  {
     label: "Distribution_Cannel_Count"
     type: count
-    drill_fields: [d_distribution_channel_id]
+    drill_fields: [d_distribution_channel_id,d_distribution_channel_meaning]
   }
 }

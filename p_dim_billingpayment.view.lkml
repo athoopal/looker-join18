@@ -34,6 +34,6 @@ view: p_dim_billingpayment {
   measure: count {
 
     type: count
-    drill_fields: []
+    drill_fields: [billing_payment_id,payment_method_type]
   }
 }

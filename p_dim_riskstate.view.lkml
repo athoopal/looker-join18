@@ -28,6 +28,6 @@ view: p_dim_riskstate {
 
   measure: count {
     type: count
-    drill_fields: []
+    drill_fields: [r_risk_state_id,r_risk_state_meaning]
   }
 }

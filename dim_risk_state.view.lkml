@@ -29,12 +29,12 @@ view: dim_risk_state {
 
   measure: count {
     type: count
-    drill_fields: []
+    drill_fields: [r_risk_state_meaning,r_risk_state_id]
   }
 
   measure: count1 {
     label: "Risk_State_Count"
     type: count
-    drill_fields: [r_risk_state_id]
+    drill_fields: [r_risk_state_meaning,r_risk_state_id]
   }
 }

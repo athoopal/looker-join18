@@ -48,6 +48,6 @@ view: dim_tim {
 
   measure: count {
     type: count
-    drill_fields: []
+    drill_fields: [date_date,date_week,date_month,date_year]
   }
 }

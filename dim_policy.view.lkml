@@ -65,13 +65,13 @@ view: dim_policy {
 
   measure: count {
     type: count
-    drill_fields: []
+    drill_fields: [p_policy_id,p_policy_number]
   }
   measure: count1 {
     label: "Ploicy_Count"
     sql: ${p_policy_id} ;;
     type: count_distinct
-    drill_fields: [p_policy_id]
+    drill_fields: [p_policy_id,p_policy_number]
   }
 
 }

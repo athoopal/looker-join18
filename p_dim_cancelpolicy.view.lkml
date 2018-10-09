@@ -44,6 +44,6 @@ view: p_dim_cancelpolicy {
 
   measure: count {
     type: count
-    drill_fields: []
+    drill_fields: [cancellation_id,cancellation_type,cancellation_reason]
   }
 }

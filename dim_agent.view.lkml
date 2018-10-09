@@ -43,13 +43,13 @@ view: dim_agent {
 
   measure: count {
     type: count
-    drill_fields: [a_agent_name]
+    drill_fields: [a_agent_id,a_agent_name]
   }
 
   measure: count1 {
     label: "Agent_Count"
     type: count_distinct
-    drill_fields: [a_agent_id]
+    drill_fields: [a_agent_id,a_agent_name]
   }
 
 }

@@ -18,6 +18,6 @@ view: p_dim_lineofbusiness {
 
   measure: count {
     type: count
-    drill_fields: []
+    drill_fields: [l_line_of_business_id,l_line_of_business]
   }
 }

@@ -71,11 +71,12 @@ primary_key: yes
   measure: count {
     type: count
 
-    drill_fields: []
+    drill_fields: [p_effective_date,p_policy_id,_gross_written_premium_]
   }
 
   measure: p_gross_written_premium{
     type: sum
+    drill_fields: [p_effective_date,p_policy_id,_gross_written_premium_]
     sql: ${_gross_written_premium_} ;;
   }
 

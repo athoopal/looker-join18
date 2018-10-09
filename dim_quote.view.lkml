@@ -48,13 +48,13 @@ view: dim_quote {
 
   measure: count {
     type: count
-    drill_fields: []
+    drill_fields: [q_quote_id,q_effective_date_mmddyyyy_date,q_effective_date_mmddyyyy_week,q_effective_date_mmddyyyy_month]
   }
 
   measure: count1 {
     label: "Quote_Count"
     type: count_distinct
     sql: ${q_quote_id} ;;
-    drill_fields: [q_quote_id]
+    drill_fields: [q_quote_id,q_effective_date_mmddyyyy_date,q_effective_date_mmddyyyy_week,q_effective_date_mmddyyyy_month]
   }
 }
