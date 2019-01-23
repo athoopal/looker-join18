@@ -14,6 +14,7 @@ view: fct_agentdashboard {
   dimension: f_distribution_channel_id {
     type: string
     sql: ${TABLE}."F_Distribution Channel ID" ;;
+
   }
 
   dimension: f_line_of_business_id {
@@ -40,4 +41,6 @@ view: fct_agentdashboard {
     type: count
     drill_fields: [f_agent_id,f_distribution_channel_id,f_policy_id,f_quote_id,f_risk_state_id,f_calendar_key]
   }
+
+
 }
